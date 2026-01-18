@@ -1,33 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    margin-top: 20px;
-}
-
-.camera-container {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     display: flex;
     justify-content: center;
-    margin: 20px;
+    align-items: center;
+    color: #fff;
 }
 
-video, canvas {
-    width: 400px;
-    height: 300px;
-    border: 2px solid #333;
-    margin: 10px;
+/* Glass background blur */
+.form-wrapper {
+    width: 420px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
 }
 
-canvas {
-    display: none;
+/* Heading */
+.form-wrapper h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.controls button {
-    padding: 10px 15px;
-    margin: 10px;
+.form-wrapper p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Placeholder */
+::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
     font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
     cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,114,255,0.4);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-wrapper {
+        width: 90%;
+    }
 }
