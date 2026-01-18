@@ -2,24 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Camera Capture</title>
+    <title>Contact Information Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Camera Image & Video Capture</h1>
+<div class="background"></div>
 
-<div class="camera-container">
-    <video id="video" autoplay></video>
-    <canvas id="canvas"></canvas>
+<div class="form-wrapper">
+    <h1>Get in Touch</h1>
+    <p>We’d love to hear from you. Please fill out the form below.</p>
+
+    <form>
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="John Doe" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" required>
+        </div>
+
+        <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 98765 43210">
+        </div>
+
+        <div class="input-group">
+            <label>Subject</label>
+            <select>
+                <option>Select a topic</option>
+                <option>General Inquiry</option>
+                <option>Project Proposal</option>
+                <option>Feedback</option>
+                <option>Support</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Message</label>
+            <textarea placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+    </form>
 </div>
 
-<div class="controls">
-    <button onclick="captureImage()">Capture Image</button>
-    <button onclick="startRecording()">Start Video</button>
-    <button onclick="stopRecording()">Stop Video</button>
-</div>
-
-<script src="script.js"></script>
 </body>
 </html>
